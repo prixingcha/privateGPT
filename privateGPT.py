@@ -20,6 +20,7 @@ model_n_ctx = os.environ.get('MODEL_N_CTX')
 from constants import CHROMA_SETTINGS
 
 def main():
+    os.system('clear')
     # Parse the command line arguments
     args = parse_arguments()
     embeddings = HuggingFaceEmbeddings(model_name=embeddings_model_name)
@@ -30,7 +31,7 @@ def main():
     # Prepare the LLM
     match model_type:
         case "LlamaCpp":
-            llm = LlamaCpp(model_path=model_path, n_ctx=model_n_ctx, callbacks=callbacks, verbose=False)
+            llm = LlamaCpp(model_path=model_path, n_ctx=model_n_ctx, callbacks=callbacks, verbose=False) #, n_threads=16
         case "GPT4All":
             llm = GPT4All(model=model_path, n_ctx=model_n_ctx, backend='gptj', callbacks=callbacks, verbose=False)
         case _default:
@@ -39,7 +40,7 @@ def main():
     qa = RetrievalQA.from_chain_type(llm=llm, chain_type="stuff", retriever=retriever, return_source_documents= not args.hide_source)
     # Interactive questions and answers
     while True:
-        query = input("\nEnter a query: ")
+        query = input("\n Welcome to Private chat \n Enter a query: ")
         if query == "exit":
             break
 

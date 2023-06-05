@@ -1,3 +1,5 @@
+#this is a working copy with 3.x GB llm size.
+
 PERSIST_DIRECTORY=db
 MODEL_TYPE=GPT4All
 #lamaCpp

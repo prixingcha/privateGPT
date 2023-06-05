@@ -1,0 +1,9 @@
+{'_is_copy': None, '_mgr': BlockManager
+Items: Index(['collection_uuid', 'uuid', 'embedding', 'document', 'id', 'metadata'], dtype='object')
+Axis 1: RangeIndex(start=0, stop=1, step=1)
+ObjectBlock: slice(0, 6, 1), 6 x 1, dtype: object, '_item_cache': {}, '_attrs': {}, '_flags': <Flags(allows_duplicate_labels=True)>}
+
+
+
+
+

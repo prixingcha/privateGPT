@@ -3,6 +3,7 @@
 
 # Models
 models/
+source_documents/
 
 # Local Chroma db
 .chroma/
@@ -131,7 +132,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+##.env
 .venv
 env/
 venv/
